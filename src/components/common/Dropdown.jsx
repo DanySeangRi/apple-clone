@@ -13,10 +13,10 @@ const Dropdown = ({
     thirdItem = [],
   }) => (
     // thirdTittle,thirdItem
-    <div className="group  cursor-pointer px-1.5 ">
+    <div className="group  cursor-pointer px-1.5 hidden md:block ">
         <List name={name} />
-        <div className="
-                            fixed top-10 left-1/2 -translate-x-1/2
+        <div className="  
+                            fixed top-9 left-1/2 -translate-x-1/2
                             min-h-61.5 w-[max(1440px,100%)]
                             bg-white text-black shadow-xl
                             z-50
@@ -24,7 +24,7 @@ const Dropdown = ({
                             opacity-0 translate-y-0
                             pointer-events-none
 
-                            transition-all duration-300 ease-linear
+                            transition-all duration-300 ease-in-out
 
                             group-hover:opacity-100
                             group-hover:translate-y-3

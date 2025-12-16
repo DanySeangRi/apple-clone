@@ -4,9 +4,9 @@ import Main from "../components/layout/Main";
 import Footer from "../components/layout/Footer";
 const Home = () => {
   return (
-    <div className='h-screen'>
-        <Navbar/>
-        <Main/>
+    <div className='min-h-screen pt-12  '>
+        <Navbar />
+        <Main />
         <Footer/>
     </div>
   )
