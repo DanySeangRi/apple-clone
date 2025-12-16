@@ -5,7 +5,7 @@ const List = ({ name, to = '#' }) => {
   return (
     <nav>
       <NavLink to={to} className='px-2 '>
-       <div className=' h-10  text-[12px] flex items-center justify-center'> {name}</div>
+       <div className='text-[12px] flex items-center justify-center'> {name}</div>
       </NavLink>
     </nav>
   )
