@@ -1,7 +1,17 @@
 import React from "react";
 import List from "../common/List";
 
-const Dropdown = ({ name, items, firstTitle, secondTitle, secondItem ,foot1,foot2,thirdTittle,thirdItem}) => (
+const Dropdown = ({
+    name,
+    items = [],
+    firstTitle,
+    secondTitle,
+    secondItem = [],
+    foot1,
+    foot2,
+    thirdTittle,
+    thirdItem = [],
+  }) => (
     // thirdTittle,thirdItem
     <div className="group  cursor-pointer px-1.5 ">
         <List name={name} />
