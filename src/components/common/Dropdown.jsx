@@ -5,11 +5,23 @@ const Dropdown = ({ name, items, firstTitle, secondTitle, secondItem ,foot1,foot
     // thirdTittle,thirdItem
     <div className="group  cursor-pointer px-1.5 ">
         <List name={name} />
-        <div className="group-hover:block hidden min-h-61.5 w-[max(1440px,100%)]
-                        fixed top-12 left-1/2 
-                         -translate-x-1/2 text-black 
-                         bg-white shadow-2xl z-auto 
-                        transition-all duration-300 ease-in-out  " >
+        <div className="
+                            fixed top-10 left-1/2 -translate-x-1/2
+                            min-h-61.5 w-[max(1440px,100%)]
+                            bg-white text-black shadow-xl
+                            z-50
+
+                            opacity-0 translate-y-0
+                            pointer-events-none
+
+                            transition-all duration-300 ease-linear
+
+                            group-hover:opacity-100
+                            group-hover:translate-y-3
+                            group-hover:pointer-events-auto 
+                       "
+                        >
+
             <div className="flex mx-auto items-start   justify-start w-[1024px] px-5.5 pt-10 pb-21 ">
 
                 <div className="flex flex-col min-w-66 w-auto pr-22 text-[12px]">
