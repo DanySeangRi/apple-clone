@@ -6,10 +6,10 @@ import './navabr.css'
 import Dropdown from '../common/Dropdown';
 const Navbar = () => {
   return (
-    <nav className=' h-12   w-full justify-center items-center bg-[#f5f5f7cc] '>
-      <ul className='flex items-center justify-center gap-6 h-12   '>
+    <nav className=' h-12   w-full justify-center items-center bg-[#f5f5f7cc]  [&:has(.group:hover)]:bg-white'>
+      <ul className='   flex items-center justify-center gap-6 h-12   '>
         <FaApple size={20} />
-        <Dropdown name="Store"
+        <Dropdown name="Store" 
           items={['Shop Gift', 'Mac', 'iPad', 'iPhone', 'Apple Watch', 'Apple Vision Pro', 'AirPods', 'Accessories']}
           firstTitle='Shop'
           foot1='Compare iPad'
@@ -55,12 +55,12 @@ const Navbar = () => {
         <Dropdown name="Entertainment"
           items={['Explore Entertainment', 'Apple One', 'Apple TV', 'Apple Music', 'Apple Arcade', 'Apple Fitness+', 'Apple PodCasts', 'Apple Books', 'Apple Stores']} firstTitle='Explore Entertainment'
           secondTitle='Support' secondItem={['Apple TV Support', 'Apple Music Support']}
-          thirdTittle='' thirdItem={[]} />
+          />
 
         <Dropdown name="Accessories"
           items={['Shop All Accesories', 'Mac', 'iPad', 'iPhone', 'Apple Watch', 'Apple Vision Pro', 'AirPods', 'Tv & Home']} firstTitle='Shop Accessories'
           secondTitle='Explore Accessories' secondItem={['Made by Apple', 'Beats', 'AirTag', 'Assisitive Technologies']}
-          thirdTittle='' thirdItem={[]} />
+           />
 
         <Dropdown name="Support"
           items={['iPhone', 'Mac', 'iPad', 'Watch', 'Apple Vision Pro', 'Airpods', 'Music', 'TV']} firstTitle='Explore Support' foot1='Explore Support'
