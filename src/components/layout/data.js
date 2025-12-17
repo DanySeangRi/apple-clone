@@ -10,6 +10,7 @@ const menuItems = [
     { name: "Entertainment", items: ['Explore Entertainment', 'Apple One', 'Apple TV', 'Apple Music', 'Apple Arcade', 'Apple Fitness+', 'Apple PodCasts', 'Apple Books', 'Apple Stores'], firstTitle: 'Explore Entertainment', secondTitle: 'Support', secondItem: ['Apple TV Support', 'Apple Music Support'] },
     { name: "Accessories", items: ['Shop All Accesories', 'Mac', 'iPad', 'iPhone', 'Apple Watch', 'Apple Vision Pro', 'AirPods', 'Tv & Home'], firstTitle: 'Shop Accessories', secondTitle: 'Explore Accessories', secondItem: ['Made by Apple', 'Beats', 'AirTag', 'Assisitive Technologies'] },
     { name: "Support", items: ['iPhone', 'Mac', 'iPad', 'Watch', 'Apple Vision Pro', 'Airpods', 'Music', 'TV'], firstTitle: 'Explore Support', foot1: 'Explore Support', secondTitle: 'Get Help', secondItem: ['Community', 'Check Coverge', 'Genuis Bar', 'Repair'], thirdTittle: 'Helpful Topic', thirdItem: ['Get AppleCare', 'Apple Accounnt and Password', 'Billing & Subscription', 'Acessibilty'] },
+    {searchItem:['Shop Gift','Find a Stored','Apple Gift Card','Apple Vision Pro','Apple Trade']}
   ]
 
 export default menuItems
