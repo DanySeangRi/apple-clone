@@ -7,12 +7,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import menuItems from './data'
 const Navbar = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   return (
     <>
       <nav className='fixed top-0 left-0 z-50 h-12 w-full
        bg-[#f5f5f7cc] backdrop-blur-md [&:has(.element:hover)]:bg-white '>
-        <ul className='element flex items-center 
+        <ul className='element flex items-center w-auto
         justify-between md:justify-center gap-6 h-12 '>
           <div className='ml-5'>
             <FaApple size={20} />
@@ -122,7 +122,9 @@ const Navbar = () => {
 
           {/* Search and Shop Icons - Hidden on mobile */}
           <div className='hidden md:flex mr-4 gap-5'>
-            <CiSearch size={20} />
+             <button >
+             <CiSearch size={20} />
+             </button>
             <GrShop size={20} />
           </div>
 
@@ -151,7 +153,7 @@ const Navbar = () => {
           {menuItems.map((item, index) => (
             <div key={index} >
               <button
-                className="w-full text-left px-4 py-1"
+                className="w-full text-left px-4 py-2"
                 onClick={() => setOpen(false)}
               >
                 <h1 className="cursor-pointer text-3xl text-[#151516] font-medium">
