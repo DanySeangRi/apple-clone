@@ -12,14 +12,14 @@ const Navbar = () => {
     <>
       <nav className='fixed top-0 left-0 z-50 h-12 w-full
        bg-[#f5f5f7cc] backdrop-blur-md [&:has(.element:hover)]:bg-white '>
-        <ul className='element flex items-center w-auto
+        <ul className=' flex items-center w-auto
         justify-between md:justify-center gap-6 h-12 '>
           <div className='ml-5'>
             <FaApple size={20} />
           </div>
           
           {/* Desktop Menu - Hidden on mobile */}
-          <div className='hidden md:flex items-center gap-6'>
+          <div className=' element hidden md:flex items-center gap-6'>
             <Dropdown name="Store"
               items={menuItems[0].items}
               firstTitle={menuItems[0].firstTitle}
