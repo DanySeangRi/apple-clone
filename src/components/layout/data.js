@@ -25,5 +25,13 @@ const imageHome = [
   {image: airPod}
 
 ];
+
+const heroItem =[
+  {title:'Wraaping up this special season.' ,description:'There`s still time to make thier holiday one of kind. '},
+  {title:'iPhone' ,description:'Say hello to the lastest generation of iPhone. '},
+  {title:'AirPods Pro 3' ,description:'The World`s best in-ear Active Noise Cancellation. '}
+];
+
 export default menuItems;
 export { imageHome };
+export {heroItem};
