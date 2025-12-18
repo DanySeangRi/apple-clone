@@ -2,6 +2,7 @@ import React from "react";
 import List from "../common/List";
 
 const Dropdown = ({
+  to,
   name,
   items = [],
   firstTitle,
@@ -14,7 +15,7 @@ const Dropdown = ({
 }) => (
   // thirdTittle,thirdItem
   <div className="group  cursor-pointer px-1.5 hidden md:block ">
-    <List name={name} />
+    <List name={name} to={to} />
     <div
       className="  
                             fixed top-9 left-1/2 -translate-x-1/2

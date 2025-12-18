@@ -7,6 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import menuItems from "./data";
 import Search from "../common/Search";
+import List from "../common/List";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -20,12 +21,13 @@ const Navbar = () => {
         justify-between md:justify-center gap-6 h-12 "
         >
           <div className="ml-5">
-            <FaApple size={20} />
+            <List name={<FaApple size={20} />} to='/'/>
           </div>
 
           {/* Desktop Menu - Hidden on mobile */}
           <div className=" element hidden md:flex items-center gap-6">
             <Dropdown
+           
               name="Store"
               items={menuItems[0].items}
               firstTitle={menuItems[0].firstTitle}
@@ -60,6 +62,7 @@ const Navbar = () => {
             />
 
             <Dropdown
+              to='/iphone'
               name="iPhone"
               items={menuItems[3].items}
               firstTitle={menuItems[3].firstTitle}

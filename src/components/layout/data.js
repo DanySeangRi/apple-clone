@@ -1,3 +1,6 @@
+import shopBag from "../../assets/hero/hero_holiday_2025_last_minute__es7ljejacegm_largetall_2x.jpg";
+import threeIphone from "../../assets/hero/hero_iphone_family__fuz5j2v5xx6y_largetall_2x.jpg";
+import airPod from "../../assets/hero/hero_airpodspro_3__dn7gz4l22ree_largetall_2x.jpg";
 const menuItems = [
     { name: "Store", items: ['Shop Gift', 'Mac', 'iPad', 'iPhone', 'Apple Watch', 'Apple Vision Pro', 'AirPods', 'Accessories'], firstTitle: 'Shop', foot1: 'Compare iPad', secondTitle: 'Quick Links', secondItem: ['Find a Store', 'Order Status', 'Apple Trade In', 'Financing', 'Personal Setup'], thirdTittle: 'Shop Specail Stores', thirdItem: ['Certtifield Refurbished', 'Education', 'Business', 'Veterans and Military', 'Government'] },
     { name: "Mac", items: ['MacAir', 'Macbook Pro', 'iMac', 'Mac Mini', 'Mac Studios', 'Display'], firstTitle: 'Explore Mac', foot1: 'Compare Mac', foot2: 'Switch from PC to Mac', secondTitle: 'Shop Mac', secondItem: ['Shop Mac', 'Help Me Choose', 'Mac Accesories', 'Apple Trade In', 'Finanacing', 'Personal Setup'], thirdTittle: 'More from Mac', thirdItem: ['Mac Support', 'AppleCare', 'macOS Tahoe', 'Apple Intelligence', 'Apps by Apple', 'Better with iPhone', 'iCloud+', 'Mac for business', 'Education'] },
@@ -13,4 +16,14 @@ const menuItems = [
     {searchItem:['Shop Gift','Find a Stored','Apple Gift Card','Apple Vision Pro','Apple Trade']}
   ]
 
-export default menuItems
+
+
+
+const imageHome = [
+  { image: shopBag},
+  {image: threeIphone},
+  {image: airPod}
+
+];
+export default menuItems;
+export { imageHome };

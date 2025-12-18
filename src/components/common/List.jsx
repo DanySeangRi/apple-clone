@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const List = ({ name, to = '#' }) => {
+const List = ({ name, to  }) => {
   return (
     <nav>
       <NavLink to={to} className='px-2 '>
