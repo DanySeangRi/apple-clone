@@ -30,8 +30,15 @@ const heroItem =[
   {title:'Wraaping up this special season.' ,description:'There`s still time to make thier holiday one of kind. '},
   {title:'iPhone' ,description:'Say hello to the lastest generation of iPhone. '},
   {title:'AirPods Pro 3' ,description:'The World`s best in-ear Active Noise Cancellation. '}
+  
 ];
-
+const btnCss =[
+  { title :'Learn More', css:'bg-[#0071e3]  text-white w-33 h-11 hover:bg-[#0071e3] hover:text-white'},
+  { title :'Buy ' ,css:'bg-transparent border border-[#0071e3] text-[#0071e3] w-[73px] h-11 hover:bg-[#0071e3] hover:text-white'},
+  {title :'Shop iPhone ', css:'bg-transparent border border-[#0071e3] text-[#0071e3]  w-34 h-11 hover:bg-[#0071e3] hover:text-white'},
+  {title :'Shop gifts ', css:'bg-[#0071e3] text-white w-33 h-11'}
+]
+export {btnCss};
 export default menuItems;
 export { imageHome };
 export {heroItem};

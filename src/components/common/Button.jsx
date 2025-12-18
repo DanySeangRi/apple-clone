@@ -1,10 +1,9 @@
 import React from 'react'
 
-const Button = ({title,background}) => {
+const Button = ({title,css}) => {
   return (
-    <div className={`px-5.25 py-2.75 w-33.7 h-11  ${background} rounded-[50px] text-center `}>
-
-      {title}
+    <div className={`px-5.25 py-2.75 ${css} rounded-[50px] flex justify-center items-center`}>
+      <button>{title}</button>
     </div>
   )
 }
