@@ -4,6 +4,7 @@ import List from "../common/List";
 const Dropdown = ({
   to,
   name,
+  
   items = [],
   firstTitle,
   secondTitle,
@@ -33,48 +34,48 @@ const Dropdown = ({
                             group-hover:pointer-events-auto 
                        "
     >
-        <div className="flex mx-auto items-start   justify-start w-5xl px-5.5 pt-10 pb-21 ">
-             <div className="flex flex-col min-w-66 w-auto pr-22 text-[12px]">
-                <p className="text-[#6e6e73]">{firstTitle}</p>
-                    {items.map((item) => (
-                        <h1
-                        key={item}
-                        className="  cursor-pointer text-2xl mt-1.5 text-[#151516] font-medium "
-                        >
-                        {item}
-                        </h1>
-                    ))}
-                <div >
-                        <p className="text-[#333336] mt-4 font-medium">{foot1}</p>
-                        <p className="text-[#333336] py-1.5  font-medium">{foot2}</p>
-                </div>
-             </div>
-
-            <div className="flex flex-col pr-11 text-[12px] min-w-32.75 w-auto">
-                    <p className="text-[#6e6e73] mb-2">{secondTitle}</p>
-                    {secondItem.map((item) => (
-                        <p
-                        key={item}
-                        className="text-[#2c2c2d] cursor-pointer  mt-1 font-medium "
-                        >
-                        {item}
-                        </p>
-                    ))}
-            </div>
-            <div className="flex flex-col pr-11 text-[12px] min-w-32.75 w-auto">
-                    <p className="text-[#6e6e73] mb-2">{thirdTittle}</p>
-                    {thirdItem.map((item) => (
-                        <p
-                        key={item}
-                        className="text-[#2c2c2d] cursor-pointer  mt-1 font-medium "
-                        >
-                        {item}
-                        </p>
-                    ))}
-            </div>
-         </div>
+      <div className="flex mx-auto items-start   justify-start w-5xl px-5.5 pt-10 pb-21 ">
+        <div className="flex flex-col min-w-66 w-auto pr-22 text-[12px]">
+          <p className="text-[#6e6e73]">{firstTitle}</p>
+          {items.map((item) => (
+            <h1
+              key={item}
+              className="  cursor-pointer text-2xl mt-1.5 text-[#151516] font-medium "
+            >
+              {item}
+            </h1>
+          ))}
+          <div>
+            <p className="text-[#333336] mt-4 font-medium">{foot1}</p>
+            <p className="text-[#333336] py-1.5  font-medium">{foot2}</p>
+          </div>
         </div>
+
+        <div className="flex flex-col pr-11 text-[12px] min-w-32.75 w-auto">
+          <p className="text-[#6e6e73] mb-2">{secondTitle}</p>
+          {secondItem.map((item) => (
+            <p
+              key={item}
+              className="text-[#2c2c2d] cursor-pointer  mt-1 font-medium "
+            >
+              {item}
+            </p>
+          ))}
+        </div>
+        <div className="flex flex-col pr-11 text-[12px] min-w-32.75 w-auto">
+          <p className="text-[#6e6e73] mb-2">{thirdTittle}</p>
+          {thirdItem.map((item) => (
+            <p
+              key={item}
+              className="text-[#2c2c2d] cursor-pointer  mt-1 font-medium "
+            >
+              {item}
+            </p>
+          ))}
+        </div>
+      </div>
     </div>
+  </div>
 );
 
 export default Dropdown;
