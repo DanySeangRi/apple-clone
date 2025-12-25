@@ -1,0 +1,178 @@
+import shopBagDesktop from "../../assets/hero/largetall_2x.mp4";
+import shopBagMobile from "../../assets/hero/small_2x.mp4";
+import threeIphoneMobile from "../../assets/hero/hero_iphone_family__fuz5j2v5xx6y_small_2x.jpg";
+import threeIphoneDesktop from "../../assets/hero/hero_iphone_family__fuz5j2v5xx6y_largetall_2x.jpg";
+import iPadAirDesktop from "../../assets/hero/promo_ipad_air_avail__6i02t7nujr62_large.jpg";
+import iPadAirMobile from "../../assets/hero/hero_ipad_air_avail__c34ycq52exg2_small_2x.jpg";
+import logoIpadAirDesktop from "../../assets//logo/promo_logo_ipadair__frwnnsqveeye_medium_2x.png";
+import logoIpadAirMobile from "../../assets//logo/promo_logo_ipadair__frwnnsqveeye_large.png";
+import airPodDesktop from "../../assets//promos/hero_airpodspro_3__dn7gz4l22ree_largetall_2x.jpg";
+import airPodMobile from "../../assets//promos/promo_airpodspro_3__f6xmza7bglei_medium_2x.jpg";
+import iwatchDesktop from "../../assets//promos/promo_apple_watch_series_11__b63hxviqvonm_large_2x.jpg";
+import iwatchMobile from "../../assets//promos/promo_apple_watch_series_11__b63hxviqvonm_small_2x.jpg";
+import appleCardDesktop from "../../assets//promos/promo_apple_card__5cm7draujpey_large_2x.jpg";
+import appleCardMobile from "../../assets//promos/promo_apple_card__5cm7draujpey_small_2x.jpg";
+import appleGiftCardDesktop from "../../assets/promos/promo_apple_gift_card__etkqjveoh4uq_large.jpg";
+import appleGiftCardMobile from "../../assets/promos/promo_apple_gift_card__etkqjveoh4uq_small_2x.jpg";
+import iPadMobile from "../../assets//promos/promo_ipad__fioegapg12qi_small_2x.jpg";
+import iPadDesktop from "../../assets//promos/promo_ipad__fioegapg12qi_large_2x.jpg";
+import iPhoneTradeInMobile from "../../assets/promos/promo_iphone_tradein__bugw15ka691e_large_2x.jpg";
+import iPhoneTradeInDesktop from "../../assets/promos/promo_iphone_tradein__bugw15ka691e_small_2x.jpg";
+import logoIwatchDesktop from "../../assets/logo/promo_logo_apple_watch_series_11__d9br21pxygya_small_2x.png";
+import logoIwatchMobile from "../../assets/logo/promo_logo_apple_watch_series_11__d9br21pxygya_large.png";
+import logoiPhoneTradeInDesktop from "../../assets/logo/promo_logo_iphone_tradein__7y3gtai5az66_small_2x.png";
+import logoiPhoneTradeInMobile from "../../assets/logo/promo_logo_iphone_tradein__7y3gtai5az66_large.png";
+import logoappleCardDesktop from "../../assets/logo/logo__dcojfwkzna2q_small_2x.png";
+import logoappleCardMobile from "../../assets/logo/logo__dcojfwkzna2q_large.png";
+const homeHeroData = [
+  {
+    media: {
+      videoDesktop: shopBagDesktop,
+      videoMobile: shopBagMobile,
+    },
+    content: {
+      title: "Wrapping up this special season.",
+      description: "There’s still time to make their holiday one of a kind.",
+    },
+    logo: null,
+  },
+  {
+    media: {
+      imageDesktop: threeIphoneDesktop,
+      imageMobile: threeIphoneMobile,
+    },
+    content: {
+      title: "iPhone",
+      description: "Say hello to the latest generation of iPhone.",
+    },
+    logo: null,
+  },
+  {
+    media: {
+      imageDesktop: airPodDesktop,
+      imageMobile: airPodMobile,
+    },
+    content: {
+      title: "AirPods Pro 3",
+      description: "The world`s best in-ear Active Noise Cancellation.",
+    },
+    logo: null,
+  },
+  {
+    media: {
+      imageDesktop: iPadAirDesktop,
+      imageMobile: iPadAirMobile,
+    },
+    content: {
+      title: null,
+      description: "Now supercharged by the M3 chip.",
+    },
+    logo: {
+      title: "iPad Air",
+      desktop: logoIpadAirDesktop,
+      mobile: logoIpadAirMobile,
+    },
+  },
+  {
+    media: {
+      imageDesktop: iwatchDesktop,
+      imageMobile: iwatchMobile,
+    },
+    content: {
+      title: null,
+      description: "The ultimate wat to watch your health",
+    },
+    logo: {
+      title: "iWatch",
+      desktop: logoIwatchDesktop,
+      mobile: logoIwatchMobile,
+    },
+  },
+  {
+    media: {
+      imageDesktop: iPadDesktop,
+      imageMobile: iPadMobile,
+    },
+    content: {
+      title: "iPad",
+      description:
+        "Now with the speed of the A16 chip and double the starting storage.",
+    },
+    logo: null,
+  },
+  {
+    media: {
+      imageDesktop: appleGiftCardDesktop,
+      imageMobile: appleGiftCardMobile,
+    },
+    content: {
+      title: "Apple Gift Card",
+      description: "Let them spend holidays however they like.",
+    },
+    logo: null,
+  },
+  {
+    media: {
+      imageDesktop: iPhoneTradeInDesktop,
+      imageMobile: iPhoneTradeInMobile,
+    },
+    content: {
+      title: null,
+      description:
+        "Get up to $180-$670 in credit when you trade in iPhone 13 or higher.",
+    },
+    logo: {
+      title: "iPone Trade In",
+      desktop: logoiPhoneTradeInDesktop,
+      mobile: logoiPhoneTradeInMobile,
+    },
+  },
+  {
+    media: {
+      imageDesktop: appleCardDesktop,
+      imageMobile: appleCardMobile,
+    },
+    content: {
+      title: null,
+      description: "Get up 3% Daily Cash back with purchase",
+    },
+    logo: {
+      title: "iWatch",
+      desktop: logoappleCardDesktop,
+      mobile: logoappleCardMobile,
+    },
+  },
+];
+
+const btnCss = [
+  {
+    title: "Learn More",
+    css: "bg-[#0071e3] w-[104px] h-[36px] text-white lg:w-33 lg:h-11 hover:bg-[#0071e3] hover:text-white",
+  },
+  {
+    title: "Buy ",
+    css: "bg-transparent border border-[#0071e3] text-[#0071e3] w-[62px] h-[36px] Lg:w-[73.2px] lg:h-11 hover:bg-[#0071e3] hover:text-white",
+  },
+  {
+    title: "Shop iPhone ",
+    css: "bg-transparent border w-[114px] h-[36px] border-[#0071e3] text-[#0071e3]  lg:w-[140px] lg:h-11 hover:bg-[#0071e3] hover:text-white",
+  },
+  {
+    title: "Shop gifts ",
+    css: "bg-[#0071e3] w-[96px] h-9 text-white lg:w-[121px] lg:h-11",
+  },
+  {
+    title: "Get your estimate ",
+    css: "bg-[#0071e3] lg:w-[145px] lg:h-[44px] text-white lg:w-[121px] lg:h-11",
+  },
+  {
+    title: "Apply now ",
+    css: "bg-transparent border w-[104px] h-[36px] border-[#0071e3] text-[#0071e3]  lg:w-33 lg:h-11 hover:bg-[#0071e3] hover:text-white",
+  },
+];
+const cardCss = [
+  { bigCard: "relative h-125 lg:h-173 w-full overflow-hidden mb-3" },
+  { smallCard: "relative h-[500px] lg:h-[580px] overflow-hidden " },
+];
+
+export { cardCss, btnCss, homeHeroData };

@@ -5,7 +5,7 @@ import { GrShop } from "react-icons/gr";
 import Dropdown from "../common/Dropdown";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
-import menuItems from "./data";
+import menuItems from "./dropdownData";
 import Search from "../common/Search";
 import List from "../common/List";
 const Navbar = () => {

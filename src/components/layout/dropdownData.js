@@ -1,10 +1,4 @@
-import shopBagDesktop from "../../assets/hero/largetall_2x.mp4";
-import shopBagMobile from "../../assets/hero/small_2x.mp4";
 
-import threeIphoneMobile from "../../assets/hero/hero_iphone_family__fuz5j2v5xx6y_small_2x.jpg";
-import threeIphoneDesktop from "../../assets/hero/hero_iphone_family__fuz5j2v5xx6y_largetall_2x.jpg";
-import airPodDesktop from "../../assets/hero/hero_ipad_air_avail__c34ycq52exg2_mediumtall_2x.jpg";
-import airPodMoible from "../../assets/hero/hero_ipad_air_avail__c34ycq52exg2_small_2x.jpg";
 const menuItems = [
   {
     name: "Store",
@@ -298,43 +292,6 @@ const menuItems = [
   },
 ];
 
-const imageHome = [
-  { videoDesktop: shopBagDesktop, videoMobile: shopBagMobile },
-  { imageDesktop: threeIphoneDesktop, imageMobile: threeIphoneMobile },
-  { imageDesktop: airPodDesktop, imageMobile: airPodMoible },
-];
-
-const heroItem = [
-  {
-    title: "Wraaping up this special season.",
-    description: "There`s still time to make thier holiday one of kind. ",
-  },
-  {
-    title: "iPhone",
-    description: "Say hello to the lastest generation of iPhone. ",
-  },
-  { title: "iPad Air", description: "Now Supercharged by M3 chip." },
-];
-const btnCss = [
-  {
-    title: "Learn More",
-    css: "bg-[#0071e3] w-[104px] h-[36px] text-white lg:w-33 lg:h-11 hover:bg-[#0071e3] hover:text-white",
-  },
-  {
-    title: "Buy ",
-    css: "bg-transparent border border-[#0071e3] text-[#0071e3] w-[62px] h-[36px] Lg:w-[73.2px] lg:h-11 hover:bg-[#0071e3] hover:text-white",
-  },
-  {
-    title: "Shop iPhone ",
-    css: "bg-transparent border w-[114px] h-[36px] border-[#0071e3] text-[#0071e3]  lg:w-[140px] lg:h-11 hover:bg-[#0071e3] hover:text-white",
-  },
-  { title: "Shop gifts ", css: "bg-[#0071e3] w-[96px] h-9 text-white lg:w-[121px] lg:h-11" },
-];
-import logoIpadAirDesktop from "../../assets//logo/promo_logo_ipadair__frwnnsqveeye_medium_2x.png";
-import logoIpadAirMobile from "../../assets//logo/hero_eyebrow_logo__ee6zpqgwfxm6_small_2x.png";
-const logo = [{ title: "ipad air", logoDesktop: logoIpadAirDesktop,logoMobile:logoIpadAirMobile }];
-export { btnCss };
 export default menuItems;
-export { imageHome };
-export { heroItem };
-export { logo };
+
+
