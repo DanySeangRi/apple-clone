@@ -4,14 +4,14 @@ import List from "../common/List";
 const Dropdown = ({
   to,
   name,
-  
+
   items = [],
-  firstTitle,
+  firstTitle="",
   secondTitle,
   secondItem = [],
-  foot1,
-  foot2,
-  thirdTittle,
+  foot1="",
+  foot2="",
+  thirdTittle="",
   thirdItem = [],
 }) => (
   // thirdTittle,thirdItem

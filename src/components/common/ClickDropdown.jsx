@@ -2,18 +2,19 @@ import React, { useState, useRef } from "react";
 import List from "./List";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const Search = ({ 
-  name, 
-  searchItem = [], 
-  header, 
-  icon,icons=[],
-  titleList,}) => {
+const Search = ({
+  name,
+  searchItem = [],
+  header,
+  icon,
+  icons = [],
+  titleList,
+}) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef(null);
   const closeTimeout = useRef(null);
 
-
-  /* CLOSE ONLY when mouse leaves */
+  /* when mouse leaves it close  */
   const handleMouseLeave = () => {
     closeTimeout.current = setTimeout(() => {
       setOpen(false);
@@ -32,10 +33,7 @@ const Search = ({
       onMouseLeave={handleMouseLeave}
     >
       {/* Trigger */}
-      <div
-        onClick={() => setOpen((prev) => !prev)}
-        className="cursor-pointer"
-      >
+      <div onClick={() => setOpen(!open)} className="cursor-pointer">
         <List name={name} />
       </div>
 
@@ -55,32 +53,25 @@ const Search = ({
       >
         <div className="flex mx-auto w-5xl px-5.5 pt-10 pb-21">
           <div className="flex flex-col gap-2 text-[12px] pr-22">
-
             <div className="flex items-center gap-2">
               {icon}
-              <div  className="text-[20px] focus:outline-none w-240">
-                  {header}
+              <div className="text-[20px] ">
+                {header}
               </div>
-           
             </div>
 
-            <p className="text-[#898989] mt-4 font-medium mb-2">
-              {titleList}
-            </p>
+            <p className="text-[#898989] mt-4 font-medium mb-2">{titleList}</p>
 
-            {searchItem.map((item,index) => (
+            {searchItem.map((item, index) => (
               <div
                 key={index}
                 className="flex items-center gap-3 hover:bg-[#b7b7b71e] px-2 py-1 cursor-pointer"
               >
-               {icons[index] || <FaArrowRightLong className="text-gray-400" />}
-               
-                <p className="text-[#2c2c2d] font-medium w-240">
-                  {item}
-                </p>
+                {icons[index] || <FaArrowRightLong className="text-gray-400" />}
+
+                <p className="text-[#2c2c2d] font-medium w-240">{item}</p>
               </div>
             ))}
-
           </div>
         </div>
       </div>

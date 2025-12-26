@@ -41,6 +41,7 @@ const Navbar = () => {
                 secondItem={item.secondItem}
                 thirdTittle={item.thirdTittle}
                 thirdItem={item.thirdItem}
+                
               />
             ))}
           </div>
@@ -53,12 +54,10 @@ const Navbar = () => {
               icon={<CiSearch size={22} />}
               icons={<FaArrowRightLong className="text-gray-400" />}
               header={
-                <input
-                  type="search"
-                  placeholder="Search apple.com"
-                 
-                  autoFocus
-                />
+                <input 
+                type="search" 
+                placeholder="Search apple.com" 
+                className="focus:outline-none w-240" />
               }
               titleList="Quick Links"
             />

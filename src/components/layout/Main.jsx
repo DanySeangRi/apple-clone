@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../common/Card.jsx";
 import Button from "../common/Button.jsx";
-import { btnCss, cardCss, homeHeroData } from "./promosData.js";
+import { btnCss, cardCss, homeHeroData,slideShowData } from "./promosData.js";
 
 const Main = () => {
   return (
@@ -17,8 +17,6 @@ const Main = () => {
             imageMobile={item.media.imageMobile}
             title={item.content?.title}
             description={item.content?.description}
-            logoDesktop={item.logo?.desktop}
-            logoMobile={item.logo?.mobile}
             variant="big"
             btn1={
               <Button
@@ -37,7 +35,7 @@ const Main = () => {
       </section>
 
       {/* SMALL GRID CARDS */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <section className=" promos grid grid-cols-1 md:grid-cols-2 gap-3">
         {homeHeroData.slice(3).map((item, index) => {
           const btn1 =
             index === 4 ? null : index === 5 ? (
@@ -67,14 +65,35 @@ const Main = () => {
               btn1={btn1}
               btn2={btn2}
               css={cardCss[1].smallCard}
-              variant={index==0 || index ===1 || index===3 ?'big':'small'}
+              variant={
+                index == 0 || index === 1 || index === 3 ? "big" : "small"
+              }
             />
           );
         })}
       </section>
 
-      <section className="">
-        
+      <section className="h-239.25 pt-13.25">
+        <div className="flex flex-col">
+          <h1 className="text-center text-[32px] lg:text-[56px] font-normal">
+            Endless entertainment
+          </h1>
+          <div className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-4 px-4">
+            {slideShowData.map((item, index) => (
+             <div className=" snap-start shrink-0   ">
+               <Card
+                key={index}
+                videoDesktop={item.media.videoDesktop}
+                videoMobile={item.media.videoMobile}
+                imageDesktop={item.media.imageDesktop}
+                imageMobile={item.media.imageMobile}
+                css={cardCss[2].slideShowBigCard}
+                appleTvLogo={item.logo.mobile}
+              />
+             </div>
+            ))}
+          </div>
+        </div>
       </section>
     </div>
   );

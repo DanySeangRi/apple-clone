@@ -167,11 +167,142 @@ const btnCss = [
 ];
 const cardCss=[
   {bigCard:'relative h-125 lg:h-173 w-full overflow-hidden mb-3'},
-  {smallCard:'relative h-[500px] lg:h-[580px] overflow-hidden '}
+  {smallCard:'relative h-[500px] lg:h-[580px] overflow-hidden '},
+  {slideShowBigCard : 'relative w-[275px] h-[498px] sm:w-[688px] sm:h-[338px] md:w-[930px] md:h-[523px] lg:h-[668px] lg:w-[1250px]'}
+]
+
+import f1DriveDesktop from '../../assets//feature/1960x1044sr.jpg'
+import f1DriverMobile from '../../assets//feature/548x992nr.jpg'
+import fourGrilDesktop from '../../assets/feature/four-girlDesktop.jpg'
+import feargirlDesktop from '../../assets/feature/fear-girlDesktop.jpg'
+import franceDesktop from '../../assets/feature/franceDesktop.jpg'
+import oldManDesktop from '../../assets/feature/oldManDesktop.jpg'
+import sportDesktop from '../../assets/feature/sportDesktop.jpg'
+import twoManDesktop from '../../assets/feature/twoManDesktop.jpg'
+import appleTvMobile from '../../assets/logo/logo_hero_light__d7t8cya4x26a_small.png'
+const slideShowData =[
+  {
+      
+    media: {
+      imageDesktop: f1DriveDesktop,
+      imageMobile: f1DriverMobile,
+    },
+     content: {
+      title: null,
+      description: "Get up 3% Daily Cash back with purchase",
+    },
+     logo: {
+      title: "iWatch",
+      desktop: logoappleCardDesktop,
+      mobile: appleTvMobile,
+    },
+  
+  },
+    {
+      
+    media: {
+      imageDesktop: fourGrilDesktop,
+      imageMobile: f1DriverMobile,
+    },
+     content: {
+      title: null,
+      description: "Get up 3% Daily Cash back with purchase",
+    },
+     logo: {
+      title: "iWatch",
+      desktop: logoappleCardDesktop,
+      mobile: appleTvMobile,
+    },
+  
+  },
+    {
+      
+    media: {
+      imageDesktop: feargirlDesktop,
+      imageMobile: f1DriverMobile,
+    },
+     content: {
+      title: null,
+      description: "Get up 3% Daily Cash back with purchase",
+    },
+     logo: {
+      title: "iWatch",
+      desktop: logoappleCardDesktop,
+      mobile: appleTvMobile,
+    },
+  
+  },
+    {
+      
+    media: {
+      imageDesktop: oldManDesktop,
+      imageMobile: f1DriverMobile,
+    },
+     content: {
+      title: null,
+      description: "Get up 3% Daily Cash back with purchase",
+    },
+     logo: {
+      title: "iWatch",
+      desktop: logoappleCardDesktop,
+      mobile: appleTvMobile,
+    },
+  
+  },
+    {
+      
+    media: {
+      imageDesktop: sportDesktop,
+      imageMobile: f1DriverMobile,
+    },
+     content: {
+      title: null,
+      description: "Get up 3% Daily Cash back with purchase",
+    },
+     logo: {
+      title: "iWatch",
+      desktop: logoappleCardDesktop,
+      mobile: appleTvMobile,
+    },
+  
+  },
+   {
+      
+    media: {
+      imageDesktop: franceDesktop,
+      imageMobile: f1DriverMobile,
+    },
+     content: {
+      title: null,
+      description: "Get up 3% Daily Cash back with purchase",
+    },
+     logo: {
+      title: "iWatch",
+      desktop: logoappleCardDesktop,
+      mobile: appleTvMobile,
+    },
+  
+  },
+   {
+      
+    media: {
+      imageDesktop: twoManDesktop,
+      imageMobile: f1DriverMobile,
+    },
+     content: {
+      title: null,
+      description: "Get up 3% Daily Cash back with purchase",
+    },
+     logo: {
+      title: "iWatch",
+      desktop: logoappleCardDesktop,
+      mobile: appleTvMobile,
+    },
+  
+  }
 ]
 
 
 
-
-export { cardCss,btnCss,homeHeroData };
+export { cardCss,btnCss,homeHeroData,slideShowData };
 
