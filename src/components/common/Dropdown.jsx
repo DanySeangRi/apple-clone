@@ -19,7 +19,7 @@ const Dropdown = ({
     <List name={name} to={to} />
     <div
       className="  
-                            fixed top-9 left-1/2 -translate-x-1/2
+                           fixed top-9 left-1/2 -translate-x-1/2
                             min-h-61.5 w-[max(1440px,100%)]
                             bg-white text-black shadow-xl
                             z-50

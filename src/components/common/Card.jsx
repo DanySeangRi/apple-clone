@@ -53,14 +53,14 @@ const Card = ({
       <div className="relative z-10 flex flex-col items-center text-center gap-2 mt-10">
         {logoMobile && logoDesktop && (
           <picture>
-            <source media="(min-width: 740px)" srcSet={logoDesktop} />
+            <source media="(min-width: 2040px)" srcSet={logoDesktop} />
             <img src={logoMobile} alt="Logo" loading="lazy" />
           </picture>
         )}
 
         <div className="flex flex-col gap-2 w-full">
           {title && (
-            <h1 className="mx-auto font-medium text-[32px] lg:text-[52px] leading-[1.05]">
+            <h1 className="mx-auto font-medium text-[28px] lg:text-[36px] 2xl:text-[52px]  leading-[1.05]">
               {title}
             </h1>
           )}

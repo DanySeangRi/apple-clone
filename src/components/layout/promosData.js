@@ -78,11 +78,11 @@ const homeHeroData = [
       imageDesktop: iwatchDesktop,
       imageMobile: iwatchMobile,
     },
-    content: {
+     content: {
       title: null,
       description: "The ultimate wat to watch your health",
     },
-    logo: {
+     logo: {
       title: "iWatch",
       desktop: logoIwatchDesktop,
       mobile: logoIwatchMobile,
@@ -94,9 +94,8 @@ const homeHeroData = [
       imageMobile: iPadMobile,
     },
     content: {
-      title: "iPad",
-      description:
-        "Now with the speed of the A16 chip and double the starting storage.",
+      title: 'iPad',
+      description: "Now with the speed of the A16 chip and double the starting storage.",
     },
     logo: null,
   },
@@ -105,8 +104,8 @@ const homeHeroData = [
       imageDesktop: appleGiftCardDesktop,
       imageMobile: appleGiftCardMobile,
     },
-    content: {
-      title: "Apple Gift Card",
+   content: {
+      title: 'Apple Gift Card',
       description: "Let them spend holidays however they like.",
     },
     logo: null,
@@ -116,12 +115,11 @@ const homeHeroData = [
       imageDesktop: iPhoneTradeInDesktop,
       imageMobile: iPhoneTradeInMobile,
     },
-    content: {
+     content: {
       title: null,
-      description:
-        "Get up to $180-$670 in credit when you trade in iPhone 13 or higher.",
+      description: "Get up to $180-$670 in credit when you trade in iPhone 13 or higher.",
     },
-    logo: {
+     logo: {
       title: "iPone Trade In",
       desktop: logoiPhoneTradeInDesktop,
       mobile: logoiPhoneTradeInMobile,
@@ -132,11 +130,11 @@ const homeHeroData = [
       imageDesktop: appleCardDesktop,
       imageMobile: appleCardMobile,
     },
-    content: {
+     content: {
       title: null,
       description: "Get up 3% Daily Cash back with purchase",
     },
-    logo: {
+     logo: {
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: logoappleCardMobile,
@@ -157,22 +155,23 @@ const btnCss = [
     title: "Shop iPhone ",
     css: "bg-transparent border w-[114px] h-[36px] border-[#0071e3] text-[#0071e3]  lg:w-[140px] lg:h-11 hover:bg-[#0071e3] hover:text-white",
   },
-  {
-    title: "Shop gifts ",
-    css: "bg-[#0071e3] w-[96px] h-9 text-white lg:w-[121px] lg:h-11",
-  },
-  {
-    title: "Get your estimate ",
-    css: "bg-[#0071e3] lg:w-[145px] lg:h-[44px] text-white lg:w-[121px] lg:h-11",
+  { title: "Shop gifts ", css: "bg-[#0071e3] w-[96px] h-9 text-white lg:w-[121px] lg:h-11" },
+  { 
+    title: "Get your estimate ", 
+    css: "bg-[#0071e3] lg:w-[145px] lg:h-[44px] text-white lg:w-[121px] lg:h-11" 
   },
   {
     title: "Apply now ",
     css: "bg-transparent border w-[104px] h-[36px] border-[#0071e3] text-[#0071e3]  lg:w-33 lg:h-11 hover:bg-[#0071e3] hover:text-white",
   },
 ];
-const cardCss = [
-  { bigCard: "relative h-125 lg:h-173 w-full overflow-hidden mb-3" },
-  { smallCard: "relative h-[500px] lg:h-[580px] overflow-hidden " },
-];
+const cardCss=[
+  {bigCard:'relative h-125 lg:h-173 w-full overflow-hidden mb-3'},
+  {smallCard:'relative h-[500px] lg:h-[580px] overflow-hidden '}
+]
 
-export { cardCss, btnCss, homeHeroData };
+
+
+
+export { cardCss,btnCss,homeHeroData };
+

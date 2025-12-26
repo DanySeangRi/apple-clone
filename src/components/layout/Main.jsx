@@ -37,7 +37,7 @@ const Main = () => {
       </section>
 
       {/* SMALL GRID CARDS */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {homeHeroData.slice(3).map((item, index) => {
           const btn1 =
             index === 4 ? null : index === 5 ? (

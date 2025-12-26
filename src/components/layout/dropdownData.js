@@ -290,6 +290,14 @@ const menuItems = [
       "Apple Trade",
     ],
   },
+  {
+    shopItem: [
+      "Orders",
+      "Your Save",
+      "Account",
+      "Sign In",
+    ],
+  },  
 ];
 
 export default menuItems;

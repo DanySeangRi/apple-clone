@@ -5,11 +5,14 @@ import { GrShop } from "react-icons/gr";
 import Dropdown from "../common/Dropdown";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
-import menuItems from "./dropdownData";
-import Search from "../common/Search";
+import menuItems from "./dropdownData.js";
+import ClickDropdown from "../common/ClickDropdown.jsx";
 import List from "../common/List";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { icon } from "../common/Icon.jsx";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
   return (
     <>
       <nav
@@ -44,22 +47,48 @@ const Navbar = () => {
 
           {/* Search and Shop Icons - Hidden on mobile */}
           <div className="hidden md:flex mr-4 gap-5 items-center">
-            <Search
+            <ClickDropdown
               name={<CiSearch size={20} />}
               searchItem={menuItems[11].searchItem}
+              icon={<CiSearch size={22} />}
+              icons={<FaArrowRightLong className="text-gray-400" />}
+              header={
+                <input
+                  type="search"
+                  placeholder="Search apple.com"
+                 
+                  autoFocus
+                />
+              }
+              titleList="Quick Links"
             />
-            <Search
-            name={ <GrShop size={20} />}
-            searchItem={menuItems[11].searchItem}
+            <ClickDropdown
+              name={<GrShop size={20} />}
+              searchItem={menuItems[12].shopItem}
+              header="Your Bag is empty."
+              icons={icon[0].icon1}
+              titleList="My Profile"
             />
-           
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden mr-4 gap-5 items-center">
-            <CiSearch size={20} />
+            <button
+              onClick={() => {
+                setOpenSearch(!openSearch);
+                setOpen(false);
+              }}
+              className=""
+            >
+              {openSearch ? <IoMdClose size={24} /> : <CiSearch size={20} />}
+            </button>
             <GrShop size={20} />
-            <button onClick={() => setOpen(!open)} className="">
+            <button
+              onClick={() => {
+                setOpen(!open);
+                setOpenSearch(false);
+              }}
+            >
               {open ? <IoMdClose size={24} /> : <GiHamburgerMenu size={20} />}
             </button>
           </div>
@@ -79,7 +108,35 @@ const Navbar = () => {
             <div key={index}>
               <button
                 className="w-full text-left px-4 py-2"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  setOpen(false);
+                  setOpenSearch(false);
+                }}
+              >
+                <h1 className="cursor-pointer text-xl text-[#151516] font-medium">
+                  {item.name}
+                </h1>
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div
+        className={`fixed top-12 left-0 w-full bg-white z-40 overflow-y-auto transition-all duration-300 ease-in ${
+          openSearch
+            ? "translate-y-0 opacity-100 transition-all duration-300 ease-in-out "
+            : "-translate-y-2 duration-300 ease-in-out opacity-0 pointer-events-none "
+        }`}
+      >
+        <div className="px-4 py-6 md:hidden">
+          {menuItems.map((item, index) => (
+            <div key={index}>
+              <button
+                className="w-full text-left px-4 py-2"
+                onClick={() => {
+                  setOpen(false);
+                  setOpenSearch(false);
+                }}
               >
                 <h1 className="cursor-pointer text-xl text-[#151516] font-medium">
                   {item.name}
