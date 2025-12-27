@@ -359,8 +359,96 @@ const slideShowData =[
   
 
 ]
+import danceDesktop from '../../../assets/videoSlide/danceDesktop.mp4'
+import danceMobile from '../../../assets/videoSlide/danceMobile.mp4'
+import errorDesktop from  '../../../assets/videoSlide/errorDesktop.mp4'
+import errorMobile from '../../../assets/videoSlide/errorMobile.mp4'
+import helicopterDesktop from '../../../assets/videoSlide/helicopterDesktop.mp4'
+import helicopterMobile from '../../../assets/videoSlide/helicopterMobile.mp4'
+import jasonDesktop from '../../../assets/videoSlide/jasonDesktop.mp4'
+import jasonMobile from '../../../assets/videoSlide/jasonMobile.mp4'
+import pandaDesktop from '../../../assets/videoSlide/pandaDesktop.mp4'
+import pandaMobile from '../../../assets/videoSlide/pandaMobile.mp4'
+import ridingBikeDesktop from '../../../assets/videoSlide/ridingBikeDesktop.mp4'
+import ridingBikeMobile from '../../../assets/videoSlide/ridingBikeMobile.mp4'
 
 
 
-export { cardCss,btnCss,homeHeroData,slideShowData };
+const videoSlideShowData =[
+  {
+      
+    media: {
+      videoDesktop: danceDesktop,
+      videoMobile: danceMobile,
+    },
+     content: {
+      title: 'Design for Every Student',
+      description: "Accessibility",
+    },
+  
+  },
+   {
+      
+     media: {
+      videoDesktop:  errorDesktop,
+      videoMobile: errorMobile,
+    },
+     content: {
+      title: 'The Underdogs:Blue Screen of Death',
+      description: "Apple At Work",
+    },
+  },
+    {
+      
+     media: {
+      videoDesktop: helicopterDesktop,
+      videoMobile: helicopterMobile,
+    },
+     content: {
+      title: 'Deaar Apple ',
+      description: "Apple Watch",
+    },
+  
+  },
+    {
+      
+    media: {
+      videoDesktop: jasonDesktop,
+      videoMobile: jasonMobile,
+    },
+     content: {
+      title: 'Jason Wang:Let Loose',
+      description: "Shot on iPhone 17 Pro",
+    },
+  },
+    {
+      
+    media: {
+      videoDesktop: pandaDesktop,
+      videoMobile: pandaMobile,
+    },
+     content: {
+      title: 'A Critter Carol',
+      description: "Shot on iPhone 17 Pro",
+    },
+  
+  },
+   {
+      
+     media: {
+      videoDesktop: ridingBikeDesktop,
+      videoMobile: ridingBikeMobile,
+    },
+     content: {
+      title: 'No Frame Missed',
+      description: "Accessibility",
+    },
+    
+  
+  }, 
+  
+
+]
+
+export { cardCss,btnCss,homeHeroData,slideShowData,videoSlideShowData };
 

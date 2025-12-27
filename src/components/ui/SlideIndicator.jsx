@@ -1,9 +1,12 @@
+import React from 'react';
+
 export default function SlideIndicator({ 
   totalSlides, 
   currentIndex, 
   onSlideChange,
   activeColor,
   inactiveColor,
+  direction = 1,
 }) {
   return (
     <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
@@ -23,13 +26,24 @@ export default function SlideIndicator({
           
           {/* Foreground (active color that fills) */}
           <div 
-            className={`absolute inset-0 ${activeColor} transition-transform origin-left ${
-              index < currentIndex 
-                ? 'scale-x-100 duration-0' // Already completed - instant fill
-                : index === currentIndex 
-                ? 'scale-x-100 duration-3000' // Currently filling - slow animation
-                : 'scale-x-0 duration-0' // Not reached yet - empty
+            className={`absolute inset-0 ${activeColor} transition-all duration-3000 ${
+              direction === 1 
+                ? 'origin-left' 
+                : 'origin-right'
             }`}
+            style={{
+              transform: direction === 1
+                ? (index < currentIndex 
+                  ? 'scaleX(1)' // Already completed
+                  : index === currentIndex 
+                  ? 'scaleX(0)' // Currently filling
+                  : 'scaleX(0)') // Not reached yet
+                : (index > currentIndex 
+                  ? 'scaleX(1)' // Already completed (reversed)
+                  : index === currentIndex 
+                  ? 'scaleX(0)' // Currently filling (reversed)
+                  : 'scaleX(0)'), // Not reached yet
+            }}
           />
         </button>
       ))}
