@@ -11,13 +11,13 @@ import ClickDropdown from "../common/ClickDropdown";
 import List from "../common/List";
 import menuItems from "./dropdownData";
 import { icon } from "../common/Icon";
-
+import { IoIosSearch } from "react-icons/io";
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(false);          // Mobile menu
-  const [openSearch, setOpenSearch] = useState(false);      // Mobile search
-  const [hovered, setHovered] = useState(false);            // Desktop hover blur
+  const [openMenu, setOpenMenu] = useState(false); // Mobile menu
+  const [openSearch, setOpenSearch] = useState(false); // Mobile search
+  const [hovered, setHovered] = useState(false); // Desktop hover blur
   const [desktopSearchOpen, setDesktopSearchOpen] = useState(false); // Desktop search click
-  const [desktopShopOpen, setDesktopShopOpen] = useState(false);     // Desktop shop click
+  const [desktopShopOpen, setDesktopShopOpen] = useState(false); // Desktop shop click
 
   const closeAll = () => {
     setOpenMenu(false);
@@ -34,9 +34,8 @@ const Navbar = () => {
   return (
     <>
       {/*NAVBAR  */}
-      <nav className="fixed top-0 left-0 z-50 w-full bg-[#161617] backdrop-blur-md">
+      <nav className="fixed top-0 left-0 z-50 w-full bg-[#202020] backdrop-blur">
         <ul className="flex items-center justify-between md:justify-center gap-6 h-12">
-
           {/* Logo */}
           <div className="ml-5 text-white">
             <List name={<FaApple size={20} />} to="/" />
@@ -56,9 +55,9 @@ const Navbar = () => {
           {/* Desktop Icons */}
           <div className="hidden md:flex mr-4 gap-5 items-center text-white">
             <ClickDropdown
-              name={<CiSearch size={20} />}
+              name={<IoIosSearch size={20} />}
               searchItem={menuItems[11].searchItem}
-              icon={<CiSearch size={22} />}
+              icon={<IoIosSearch size={22} />}
               icons={<FaArrowRightLong className="text-gray-400" />}
               header={
                 <input
@@ -84,14 +83,14 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Icons */}
-          <div className="flex md:hidden mr-4 gap-5 items-center ">
+          <div className="flex md:hidden mr-4 gap-5 items-center text-white">
             <button
               onClick={() => {
                 setOpenSearch(!openSearch);
                 setOpenMenu(false);
               }}
             >
-              {openSearch ? <IoMdClose size={24} /> : <CiSearch size={20} />}
+              {openSearch ? <IoMdClose size={24} /> : <IoIosSearch size={20} />}
             </button>
 
             <GrShop size={20} />
@@ -102,7 +101,11 @@ const Navbar = () => {
                 setOpenSearch(false);
               }}
             >
-              {openMenu ? <IoMdClose size={24} /> : <GiHamburgerMenu size={20} />}
+              {openMenu ? (
+                <IoMdClose size={24} />
+              ) : (
+                <GiHamburgerMenu size={20} />
+              )}
             </button>
           </div>
         </ul>
@@ -110,13 +113,19 @@ const Navbar = () => {
 
       {/*  DESKTOP HOVER BLUR  */}
       {hovered && (
-        <div className="fixed inset-0 z-30 bg-black/10 backdrop-blur-xl pointer-events-none transition-opacity duration-300" />
+        <div
+          className="fixed
+         inset-0 z-30
+          bg-black/10
+           backdrop-blur
+            pointer-events-none transition-opacity duration-300"
+        />
       )}
 
       {/*  DESKTOP CLICK BLUR  */}
       {(desktopSearchOpen || desktopShopOpen) && (
         <div
-          className="fixed inset-0 z-30 bg-black/10 backdrop-blur-xl transition-opacity duration-300"
+          className="fixed inset-0 z-30 bg-black/10 backdrop-blur transition-opacity duration-300"
           onClick={() => {
             setDesktopSearchOpen(false);
             setDesktopShopOpen(false);
@@ -127,15 +136,14 @@ const Navbar = () => {
       {/*  MOBILE CLICK BLUR  */}
       {(openMenu || openSearch) && (
         <div
-          className="fixed inset-0 z-30 bg-black/10 backdrop-blur-xl transition-opacity duration-300"
+          className="fixed inset-0 z-30 bg-black/10 backdrop-blur transition-opacity duration-300"
           onClick={closeAll}
         />
       )}
 
       {/* MOBILE PANEL  */}
       {(openMenu || openSearch) && (
-        <div className="fixed top-12 left-0 w-full h-screen bg-white z-40 px-4 py-6 md:hidden translate-y-0 transition-all duration-300">
-
+        <div className="fixed top-12 left-0 w-full h-screen bg-[#161617] z-40 px-4 py-6 md:hidden text-white translate-y-0 transition-all duration-300">
           {/* Mobile Search */}
           {openSearch && (
             <>
@@ -144,9 +152,11 @@ const Navbar = () => {
                 placeholder="Search apple.com"
                 className="w-full border-b pb-2 mb-4 focus:outline-none text-lg"
               />
-              <h3 className="text-sm text-gray-500 mb-2">Quick Links</h3>
+              <h3 className="text-sm text-white mb-2">Quick Links</h3>
               {menuItems[11].searchItem.map((item, index) => (
-                <p key={index} className="py-3 text-lg">{item}</p>
+                <p key={index} className="py-3 text-lg">
+                  {item}
+                </p>
               ))}
             </>
           )}

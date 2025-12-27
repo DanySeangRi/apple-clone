@@ -21,14 +21,11 @@ const Dropdown = ({
       className="  
                            fixed top-9 left-1/2 -translate-x-1/2
                             min-h-61.5 w-[max(1440px,100%)]
-                            bg-black text-white shadow-xl
+                            bg-[#202020] text-white 
                             z-50
-
                             opacity-0 translate-y-0
                             pointer-events-none
-
                             transition-all duration-300 ease-in-out
-
                             group-hover:opacity-100
                             group-hover:translate-y-3
                             group-hover:pointer-events-auto 

@@ -1,5 +1,5 @@
-import shopBagDesktop from "../../assets/hero/baseball.mp4";
-import shopBagMobile from "../../assets/hero/small_2x.mp4";
+import baseBallDesktop from "../../assets/hero/baseball.mp4";
+import baseBallMobile from "../../assets/hero/baseballMobile.mp4";
 import threeIphoneMobile from "../../assets/hero/hero_iphone_family__fuz5j2v5xx6y_small_2x.jpg";
 import threeIphoneDesktop from "../../assets/hero/hero_iphone_family__fuz5j2v5xx6y_largetall_2x.jpg";
 import iPadAirDesktop from "../../assets/hero/promo_ipad_air_avail__6i02t7nujr62_large.jpg";
@@ -27,12 +27,12 @@ import logoappleCardMobile from "../../assets/logo/logo__dcojfwkzna2q_large.png"
 const homeHeroData = [
   {
     media: {
-      videoDesktop: shopBagDesktop,
-      videoMobile: shopBagMobile,
+      videoDesktop: baseBallDesktop,
+      videoMobile: baseBallMobile,
     },
     content: {
-      title: "Wrapping up this special season.",
-      description: "There’s still time to make their holiday one of a kind.",
+      title: "Cricket. Shot on iPhone.",
+      description: "iPhone 17 pro hit peak performance.",
     },
     logo: null,
   },
@@ -166,9 +166,10 @@ const btnCss = [
   },
 ];
 const cardCss=[
-  {bigCard:'relative h-125 lg:h-[937px] w-full overflow-hidden mb-3'},
+  {bigCard:'relative h-125 lg:h-173 w-full overflow-hidden mb-3'},
   {smallCard:'relative h-[500px] lg:h-[580px] overflow-hidden '},
-  {slideShowBigCard : 'relative w-[275px] h-[498px] sm:w-[688px] sm:h-[338px] md:w-[930px] md:h-[523px] lg:h-[668px] lg:w-[1250px]'}
+  {slideShowBigCard : 'relative w-[275px] h-[498px] sm:w-[688px] sm:h-[338px] md:w-[930px] md:h-[523px] lg:h-[668px] lg:w-[1250px]'},
+  {bigCard:'relative h-[600px] lg:h-[900px] w-full overflow-hidden mb-3'},
 ]
 
 import f1DriveDesktop from '../../assets//feature/1960x1044sr.jpg'

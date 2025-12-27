@@ -46,7 +46,7 @@ const Search = ({
         className={`
           fixed top-9 left-1/2 -translate-x-1/2
           min-h-61.5 w-[max(1440px,100%)]
-          bg-black shadow-xl z-50
+          bg-[#202020]  z-50
           transition-all duration-300 ease-in-out
           ${
             isOpen
@@ -59,7 +59,7 @@ const Search = ({
           <div className="flex flex-col gap-2 text-[12px] pr-22">
             <div className="flex text-white  items-center gap-2">
               {icon}
-              <div className="text-white ">{header}</div>
+              <div className="text-white text-[21px] ">{header}</div>
             </div>
 
             <p className="text-[#898989] mt-4 font-medium mb-2">{titleList}</p>

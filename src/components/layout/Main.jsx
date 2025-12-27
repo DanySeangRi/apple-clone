@@ -1,14 +1,28 @@
 import React from "react";
 import Card from "../common/Card.jsx";
 import Button from "../common/Button.jsx";
-import { btnCss, cardCss, homeHeroData,slideShowData } from "./promosData.js";
+import { btnCss, cardCss, homeHeroData, slideShowData } from "./promosData.js";
 
 const Main = () => {
   return (
     <div>
       {/* BIG HERO CARDS */}
       <section>
-        {homeHeroData.slice(0, 3).map((item, index) => (
+        {homeHeroData.slice(0, 1).map((item, index) => (
+          <Card
+            key={index}
+            videoDesktop={item.media.videoDesktop}
+            videoMobile={item.media.videoMobile}
+            imageDesktop={item.media.imageDesktop}
+            imageMobile={item.media.imageMobile}
+            variant="big"
+            css={cardCss[3].bigCard}
+             titleVideo={item.content?.title}
+            descriptionVideo={item.content?.description}
+          />
+        ))}
+
+        {homeHeroData.slice(1, 3).map((item, index) => (
           <Card
             key={index}
             videoDesktop={item.media.videoDesktop}
@@ -20,12 +34,12 @@ const Main = () => {
             variant="big"
             btn1={
               <Button
-                title={index === 0 ? btnCss[3].title : btnCss[0].title}
-                css={index === 0 ? btnCss[3].css : btnCss[0].css}
+                title={index === 1 ? btnCss[1].title : btnCss[0].title}
+                css={index === 1 ? btnCss[1].css : btnCss[0].css}
               />
             }
             btn2={
-              index > 0 && (
+              index == 0 && (
                 <Button title={btnCss[2].title} css={btnCss[2].css} />
               )
             }
@@ -52,7 +66,7 @@ const Main = () => {
             ) : (
               <Button title={btnCss[1].title} css={btnCss[1].css} />
             );
-            
+
           return (
             <Card
               key={index}
@@ -80,20 +94,20 @@ const Main = () => {
           </h1>
           <div className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-4 px-4">
             {slideShowData.map((item, index) => (
-             <div className=" snap-start shrink-0   ">
-               <Card
-                key={index}
-                videoDesktop={item.media.videoDesktop}
-                videoMobile={item.media.videoMobile}
-                imageDesktop={item.media.imageDesktop}
-                imageMobile={item.media.imageMobile}
-                css={cardCss[2].slideShowBigCard}
-                appleTvLogo={item.logo.mobile}
-                thumbNail={item.logo.thumbNail}
-                slideTilte={item.content.title}
-                slideDescription={item.content.description}
-              />
-             </div>
+              <div className=" snap-start shrink-0   ">
+                <Card
+                  key={index}
+                  videoDesktop={item.media.videoDesktop}
+                  videoMobile={item.media.videoMobile}
+                  imageDesktop={item.media.imageDesktop}
+                  imageMobile={item.media.imageMobile}
+                  css={cardCss[2].slideShowBigCard}
+                  appleTvLogo={item.logo.mobile}
+                  thumbNail={item.logo.thumbNail}
+                  slideTilte={item.content.title}
+                  slideDescription={item.content.description}
+                />
+              </div>
             ))}
           </div>
         </div>

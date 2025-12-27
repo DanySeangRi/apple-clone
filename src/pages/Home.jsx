@@ -4,7 +4,7 @@ import Main from "../components/layout/Main";
 import Footer from "../components/layout/Footer";
 const Home = () => {
   return (
-    <div className='min-h-screen pt-12  '>
+    <div className='min-h-screen    '>
         <Navbar />
         <Main />
         <Footer/>
