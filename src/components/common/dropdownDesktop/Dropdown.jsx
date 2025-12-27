@@ -25,7 +25,7 @@ const Dropdown = ({
                             z-50
                             opacity-0 -translate-y-2
                             pointer-events-none
-                            transition-all duration-500 ease-out
+                            transition-all duration-500 ease-in-out
                             group-hover:opacity-100
                             group-hover:translate-y-3
                             group-hover:pointer-events-auto 
@@ -37,14 +37,14 @@ const Dropdown = ({
           {items.map((item) => (
             <h1
               key={item}
-              className="cursor-pointer text-2xl mt-1.5 text-white font-medium transition-colors duration-300 hover:text-[#0071e3]"
+              className="cursor-pointer text-2xl mt-1.5 text-white font-medium transition-colors duration-300 "
             >
               {item}
             </h1>
           ))}
           <div>
-            <p className="text-white mt-4 font-medium transition-colors duration-300 hover:text-[#0071e3]">{foot1}</p>
-            <p className="text-white py-1.5 font-medium transition-colors duration-300 hover:text-[#0071e3]">{foot2}</p>
+            <p className="text-white mt-4 font-medium transition-colors duration-300 ">{foot1}</p>
+            <p className="text-white py-1.5 font-medium transition-colors duration-300 ">{foot2}</p>
           </div>
         </div>
 
@@ -53,7 +53,7 @@ const Dropdown = ({
           {secondItem.map((item) => (
             <p
               key={item}
-              className="text-white cursor-pointer mt-1 font-medium transition-colors duration-300 hover:text-[#0071e3]"
+              className="text-white cursor-pointer mt-1 font-medium transition-colors duration-300 "
             >
               {item}
             </p>
@@ -64,7 +64,7 @@ const Dropdown = ({
           {thirdItem.map((item) => (
             <p
               key={item}
-              className="text-white cursor-pointer mt-1 font-medium transition-colors duration-300 hover:text-[#0071e3]"
+              className="text-white cursor-pointer mt-1 font-medium transition-colors duration-300 "
             >
               {item}
             </p>

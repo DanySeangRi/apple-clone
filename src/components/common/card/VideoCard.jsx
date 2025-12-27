@@ -1,3 +1,5 @@
+import { useRef, useState, useEffect } from "react";
+import { Play, Pause } from "lucide-react";
 import Button from "../Button";
 
 const VideoCard = ({
@@ -7,11 +9,35 @@ const VideoCard = ({
   description = "",
   css = "relative w-full h-screen md:h-[700px]",
 }) => {
+  const mobileRef = useRef(null);
+  const desktopRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  useEffect(() => {
+    const mobileVideo = mobileRef.current;
+    const desktopVideo = desktopRef.current;
+
+    const activeVideo =
+      window.innerWidth < 768 ? mobileVideo : desktopVideo;
+
+    if (!activeVideo) return;
+
+    if (isPlaying) {
+      const playPromise = activeVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => setIsPlaying(false));
+      }
+    } else {
+      activeVideo.pause();
+    }
+  }, [isPlaying]);
+
   return (
     <div className={css}>
-      {/* Videos */}
+      {/* Mobile video */}
       {videoMobile && (
         <video
+          ref={mobileRef}
           src={videoMobile}
           autoPlay
           muted
@@ -20,8 +46,11 @@ const VideoCard = ({
           className="absolute inset-0 w-full h-full object-cover block md:hidden"
         />
       )}
+
+      {/* Desktop video */}
       {videoDesktop && (
         <video
+          ref={desktopRef}
           src={videoDesktop}
           autoPlay
           muted
@@ -56,6 +85,25 @@ const VideoCard = ({
           />
         </div>
       </div>
+
+      {/* Play / Pause button */}
+      <button
+        onClick={() => setIsPlaying(p => !p)}
+        className="
+          absolute bottom-6 right-6 z-20
+          p-3
+          bg-black/30 hover:bg-black/50
+          backdrop-blur-sm
+          rounded-md border border-white/20
+          transition
+        "
+      >
+        {isPlaying ? (
+          <Pause className="w-3 h-3 lg:w-5 lg:h-5 text-white fill-white" />
+        ) : (
+          <Play className="w-3 h-3 lg:w-5 lg:h-5 text-white fill-white" />
+        )}
+      </button>
     </div>
   );
 };
