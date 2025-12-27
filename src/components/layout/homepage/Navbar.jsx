@@ -11,6 +11,7 @@ import ClickDropdown from "../../common/dropdownDesktop/ClickDropdown";
 import List from "../../common/List";
 import MobileMenuDropdown from "../../common/dropdownMobile/MobileMenuDropdown";
 import MobileSearchDropdown from "../../common/dropdownMobile/MobileSearchDropdown";
+import MobileShopDropdown from "../../common/dropdownMobile/MobileShopDropdown";
 import MobilePanel from "../../common/dropdownMobile/MobilePanel";
 import menuItems from "../data/dropdownData";
 import { icon } from "../../common/Icon";
@@ -18,6 +19,7 @@ import { IoIosSearch } from "react-icons/io";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false); // Mobile menu
   const [openSearch, setOpenSearch] = useState(false); // Mobile search
+  const [openShop, setOpenShop] = useState(false); // Mobile shop/bag
   const [hovered, setHovered] = useState(false); // Desktop hover blur
   const [desktopSearchOpen, setDesktopSearchOpen] = useState(false); // Desktop search click
   const [desktopShopOpen, setDesktopShopOpen] = useState(false); // Desktop shop click
@@ -25,14 +27,15 @@ const Navbar = () => {
   const closeAll = () => {
     setOpenMenu(false);
     setOpenSearch(false);
+    setOpenShop(false);
     setDesktopSearchOpen(false);
     setDesktopShopOpen(false);
   };
 
   // Lock body scroll for mobile overlays
   useEffect(() => {
-    document.body.style.overflow = openMenu || openSearch ? "hidden" : "auto";
-  }, [openMenu, openSearch]);
+    document.body.style.overflow = openMenu || openSearch || openShop ? "hidden" : "auto";
+  }, [openMenu, openSearch, openShop]);
 
   return (
     <>
@@ -91,17 +94,27 @@ const Navbar = () => {
               onClick={() => {
                 setOpenSearch(!openSearch);
                 setOpenMenu(false);
+                setOpenShop(false);
               }}
             >
               {openSearch ? <IoMdClose size={24} /> : <IoIosSearch size={20} />}
             </button>
 
-            <GrShop size={20} />
+            <button
+              onClick={() => {
+                setOpenShop(!openShop);
+                setOpenMenu(false);
+                setOpenSearch(false);
+              }}
+            >
+              {openShop ? <IoMdClose size={24} /> : <GrShop size={20} />}
+            </button>
 
             <button
               onClick={() => {
                 setOpenMenu(!openMenu);
                 setOpenSearch(false);
+                setOpenShop(false);
               }}
             >
               {openMenu ? (
@@ -137,7 +150,7 @@ const Navbar = () => {
       )}
 
       {/*  MOBILE CLICK BLUR  */}
-      {(openMenu || openSearch) && (
+      {(openMenu || openSearch || openShop) && (
         <div
           className="fixed inset-0 z-30 bg-black/10 backdrop-blur transition-opacity duration-300"
           onClick={closeAll}
@@ -145,9 +158,10 @@ const Navbar = () => {
       )}
 
       {/* MOBILE PANEL  */}
-      <MobilePanel isOpen={openMenu || openSearch}>
+      <MobilePanel isOpen={openMenu || openSearch || openShop}>
         <MobileSearchDropdown isOpen={openSearch} />
-        <MobileMenuDropdown isOpen={openMenu} onClose={closeAll} />
+        <MobileShopDropdown isOpen={openShop} icons={icon[0].icon1} />
+        <MobileMenuDropdown isOpen={openMenu} onClose={closeAll}   />
       </MobilePanel>
     </>
   );
