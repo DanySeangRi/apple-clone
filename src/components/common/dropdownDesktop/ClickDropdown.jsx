@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import List from "./List";
+import List from "../List";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const Search = ({

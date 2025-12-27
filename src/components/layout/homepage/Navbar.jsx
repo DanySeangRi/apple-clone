@@ -6,11 +6,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-import Dropdown from "../common/Dropdown";
-import ClickDropdown from "../common/ClickDropdown";
-import List from "../common/List";
-import menuItems from "./dropdownData";
-import { icon } from "../common/Icon";
+import Dropdown from "../../common/dropdownDesktop/Dropdown";
+import ClickDropdown from "../../common/dropdownDesktop/ClickDropdown";
+import List from "../../common/List";
+import MobileMenuDropdown from "../../common/dropdownMobile/MobileMenuDropdown";
+import MobileSearchDropdown from "../../common/dropdownMobile/MobileSearchDropdown";
+import MobilePanel from "../../common/dropdownMobile/MobilePanel";
+import menuItems from "../data/dropdownData";
+import { icon } from "../../common/Icon";
 import { IoIosSearch } from "react-icons/io";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false); // Mobile menu
@@ -142,41 +145,10 @@ const Navbar = () => {
       )}
 
       {/* MOBILE PANEL  */}
-      {(openMenu || openSearch) && (
-        <div className="fixed top-12 left-0 w-full h-screen bg-[#161617] z-40 px-4 py-6 md:hidden text-white translate-y-0 transition-all duration-300">
-          {/* Mobile Search */}
-          {openSearch && (
-            <>
-              <input
-                type="search"
-                placeholder="Search apple.com"
-                className="w-full border-b pb-2 mb-4 focus:outline-none text-lg"
-              />
-              <h3 className="text-sm text-white mb-2">Quick Links</h3>
-              {menuItems[11].searchItem.map((item, index) => (
-                <p key={index} className="py-3 text-lg">
-                  {item}
-                </p>
-              ))}
-            </>
-          )}
-
-          {/* Mobile Menu */}
-          {openMenu && (
-            <>
-              {menuItems.slice(0, 11).map((item, index) => (
-                <button
-                  key={index}
-                  className="w-full text-left py-3 text-xl font-medium"
-                  onClick={closeAll}
-                >
-                  {item.name}
-                </button>
-              ))}
-            </>
-          )}
-        </div>
-      )}
+      <MobilePanel isOpen={openMenu || openSearch}>
+        <MobileSearchDropdown isOpen={openSearch} />
+        <MobileMenuDropdown isOpen={openMenu} onClose={closeAll} />
+      </MobilePanel>
     </>
   );
 };

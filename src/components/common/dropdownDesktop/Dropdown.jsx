@@ -1,5 +1,5 @@
 import React from "react";
-import List from "../common/List";
+import List from "../List";
 
 const Dropdown = ({
   to,
