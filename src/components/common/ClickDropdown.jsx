@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import List from "./List";
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -9,15 +9,16 @@ const Search = ({
   icon,
   icons = [],
   titleList,
+  isOpen,
+  setIsOpen,
 }) => {
-  const [open, setOpen] = useState(false);
   const containerRef = useRef(null);
   const closeTimeout = useRef(null);
 
-  /* when mouse leaves it close  */
+  /* Mouse hover delay (optional) */
   const handleMouseLeave = () => {
     closeTimeout.current = setTimeout(() => {
-      setOpen(false);
+      setIsOpen(false);
     }, 120);
   };
 
@@ -33,7 +34,10 @@ const Search = ({
       onMouseLeave={handleMouseLeave}
     >
       {/* Trigger */}
-      <div onClick={() => setOpen(!open)} className="cursor-pointer">
+      <div
+        onClick={() => setIsOpen(!isOpen)}
+        className="cursor-pointer"
+      >
         <List name={name} />
       </div>
 
@@ -42,10 +46,10 @@ const Search = ({
         className={`
           fixed top-9 left-1/2 -translate-x-1/2
           min-h-61.5 w-[max(1440px,100%)]
-          bg-white text-black shadow-xl z-50
+          bg-black shadow-xl z-50
           transition-all duration-300 ease-in-out
           ${
-            open
+            isOpen
               ? "opacity-100 translate-y-3 pointer-events-auto"
               : "opacity-0 translate-y-0 pointer-events-none"
           }
@@ -53,11 +57,9 @@ const Search = ({
       >
         <div className="flex mx-auto w-5xl px-5.5 pt-10 pb-21">
           <div className="flex flex-col gap-2 text-[12px] pr-22">
-            <div className="flex items-center gap-2">
+            <div className="flex text-white  items-center gap-2">
               {icon}
-              <div className="text-[20px] ">
-                {header}
-              </div>
+              <div className="text-white ">{header}</div>
             </div>
 
             <p className="text-[#898989] mt-4 font-medium mb-2">{titleList}</p>
@@ -65,11 +67,10 @@ const Search = ({
             {searchItem.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 hover:bg-[#b7b7b71e] px-2 py-1 cursor-pointer"
+                className="flex items-center gap-3 hover:bg-[#b7b7b71e] text-white  px-2 py-1 cursor-pointer"
               >
                 {icons[index] || <FaArrowRightLong className="text-gray-400" />}
-
-                <p className="text-[#2c2c2d] font-medium w-240">{item}</p>
+                <p className="text-white  font-medium w-240">{item}</p>
               </div>
             ))}
           </div>

@@ -52,7 +52,7 @@ const Main = () => {
             ) : (
               <Button title={btnCss[1].title} css={btnCss[1].css} />
             );
-
+            
           return (
             <Card
               key={index}
@@ -89,6 +89,9 @@ const Main = () => {
                 imageMobile={item.media.imageMobile}
                 css={cardCss[2].slideShowBigCard}
                 appleTvLogo={item.logo.mobile}
+                thumbNail={item.logo.thumbNail}
+                slideTilte={item.content.title}
+                slideDescription={item.content.description}
               />
              </div>
             ))}

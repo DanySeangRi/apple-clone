@@ -15,13 +15,13 @@ const Dropdown = ({
   thirdItem = [],
 }) => (
   // thirdTittle,thirdItem
-  <div className="group  cursor-pointer px-1.5 hidden md:block ">
+  <div className="group  cursor-pointer px-1.5 text-white hidden md:block ">
     <List name={name} to={to} />
     <div
       className="  
                            fixed top-9 left-1/2 -translate-x-1/2
                             min-h-61.5 w-[max(1440px,100%)]
-                            bg-white text-black shadow-xl
+                            bg-black text-white shadow-xl
                             z-50
 
                             opacity-0 translate-y-0
@@ -40,14 +40,14 @@ const Dropdown = ({
           {items.map((item) => (
             <h1
               key={item}
-              className="  cursor-pointer text-2xl mt-1.5 text-[#151516] font-medium "
+              className="  cursor-pointer text-2xl mt-1.5 text-white font-medium "
             >
               {item}
             </h1>
           ))}
           <div>
-            <p className="text-[#333336] mt-4 font-medium">{foot1}</p>
-            <p className="text-[#333336] py-1.5  font-medium">{foot2}</p>
+            <p className="text-white mt-4 font-medium">{foot1}</p>
+            <p className="text-white py-1.5  font-medium">{foot2}</p>
           </div>
         </div>
 
@@ -56,7 +56,7 @@ const Dropdown = ({
           {secondItem.map((item) => (
             <p
               key={item}
-              className="text-[#2c2c2d] cursor-pointer  mt-1 font-medium "
+              className="text-white cursor-pointer  mt-1 font-medium "
             >
               {item}
             </p>
@@ -67,7 +67,7 @@ const Dropdown = ({
           {thirdItem.map((item) => (
             <p
               key={item}
-              className="text-[#2c2c2d] cursor-pointer  mt-1 font-medium "
+              className="text-white cursor-pointer  mt-1 font-medium "
             >
               {item}
             </p>

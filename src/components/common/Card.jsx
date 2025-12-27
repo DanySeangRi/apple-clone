@@ -1,5 +1,6 @@
 import React from "react";
-
+import Button from "./Button";
+import { LuDot } from "react-icons/lu";
 const Card = ({
   videoDesktop = null,
   videoMobile = null,
@@ -14,6 +15,9 @@ const Card = ({
   css = "relative w-full h-72 md:h-96 lg:h-120 2xl:h-150", // default styling
   variant = "big", // default variant
   appleTvLogo=null,
+  thumbNail=null,
+  slideDescription='',
+  slideTilte='',
 }) => {
   // Description width depends on variant
   const descriptionWidth = variant === "small" ? "w-66.5" : "w-auto";
@@ -89,14 +93,32 @@ const Card = ({
   
 
       </div>
-       <div className="p-8 md:hidden relative flex z-10 justify-center">
+      <div className=" h-full">
+      <div className="p-7 gap-2 flex-col relative flex z-10 items-center h-1/2">
        {appleTvLogo &&(
         <picture>
           <source   />
-          <img src={appleTvLogo} alt="" />
+          <img src={appleTvLogo} alt="" className="md:hidden" />
+        </picture>
+       )}
+        {thumbNail &&(
+        <picture>
+          <source   />
+          <img src={thumbNail} alt="" className="md:hidden" />
         </picture>
        )}
         </div>
+       <div className="z-10 relative flex-col lg:flex-row flex justify-end lg:justify-start h-1/2 items-center lg:items-end py-10  gap-2 lg:p-18  lg:gap-8">
+         <Button css='bg-white w-[110px] h-[36px] text-black lg:w-29 lg:h-11 hidden lg:inline-block' title='Stream Now' />
+      <div className="flex flex-col lg:flex-row text-[17px] lg:text-[21px] lg:mb-2">
+        <p className="   text-white font-bold flex justify-center">{slideTilte}<p className="md:flex hidden items-center"><LuDot size={30}/></p></p>
+        <p className="  text-white " >{slideDescription}</p>
+      </div>
+         <Button css='bg-white w-[110px] h-[36px] text-black lg:w-33 lg:h-11 lg:hidden ' title='Stream Now' />
+
+       </div>
+      </div>
+
     </div>
   );
 };

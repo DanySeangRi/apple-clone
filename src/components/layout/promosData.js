@@ -1,4 +1,4 @@
-import shopBagDesktop from "../../assets/hero/largetall_2x.mp4";
+import shopBagDesktop from "../../assets/hero/baseball.mp4";
 import shopBagMobile from "../../assets/hero/small_2x.mp4";
 import threeIphoneMobile from "../../assets/hero/hero_iphone_family__fuz5j2v5xx6y_small_2x.jpg";
 import threeIphoneDesktop from "../../assets/hero/hero_iphone_family__fuz5j2v5xx6y_largetall_2x.jpg";
@@ -166,7 +166,7 @@ const btnCss = [
   },
 ];
 const cardCss=[
-  {bigCard:'relative h-125 lg:h-173 w-full overflow-hidden mb-3'},
+  {bigCard:'relative h-125 lg:h-[937px] w-full overflow-hidden mb-3'},
   {smallCard:'relative h-[500px] lg:h-[580px] overflow-hidden '},
   {slideShowBigCard : 'relative w-[275px] h-[498px] sm:w-[688px] sm:h-[338px] md:w-[930px] md:h-[523px] lg:h-[668px] lg:w-[1250px]'}
 ]
@@ -180,6 +180,17 @@ import oldManDesktop from '../../assets/feature/oldManDesktop.jpg'
 import sportDesktop from '../../assets/feature/sportDesktop.jpg'
 import twoManDesktop from '../../assets/feature/twoManDesktop.jpg'
 import appleTvMobile from '../../assets/logo/logo_hero_light__d7t8cya4x26a_small.png'
+import blackManDesktop from '../../assets/feature/blackManDesktop.jpg'
+import yellGirlDesktop from '../../assets/feature/yellowGirl.jpg'
+import yellGirlMobile from '../../assets/feature/yellow-girl.jpg'
+import fourGirlMobile from '../../assets/feature/twoGrilSmokeMobile.jpg'
+import fearGrilMobile from '../../assets/feature/twoGirlMobile.jpg'
+import oldManMobile from '../../assets/feature/old-man.jpg'
+import sportMobile from '../../assets/feature/sportMobile.jpg'
+import franceMobile from '../../assets/feature/franceMobile.jpg'
+import twoManMobile from '../../assets/feature/twoManMobile.jpg'
+import blackManMobile from '../../assets/feature/blackManMobile.jpg'
+import thumNailPluribus from '../../assets/thumbnail/pluribus.png'
 const slideShowData =[
   {
       
@@ -188,13 +199,14 @@ const slideShowData =[
       imageMobile: f1DriverMobile,
     },
      content: {
-      title: null,
-      description: "Get up 3% Daily Cash back with purchase",
+      title: 'Action',
+      description: "Now stream on Apple TV.",
     },
      logo: {
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
+      thumbNail:thumNailPluribus,
     },
   
   },
@@ -202,16 +214,17 @@ const slideShowData =[
       
     media: {
       imageDesktop: fourGrilDesktop,
-      imageMobile: f1DriverMobile,
+      imageMobile: fourGirlMobile,
     },
      content: {
-      title: null,
-      description: "Get up 3% Daily Cash back with purchase",
+      title: 'Drama',
+      description: "The truth is top story.",
     },
      logo: {
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
+      thumbNail:thumNailPluribus,
     },
   
   },
@@ -219,16 +232,17 @@ const slideShowData =[
       
     media: {
       imageDesktop: feargirlDesktop,
-      imageMobile: f1DriverMobile,
+      imageMobile: fearGrilMobile,
     },
      content: {
-      title: null,
-      description: "Get up 3% Daily Cash back with purchase",
+      title: 'Thriller',
+      description: "Curiosity Kills.",
     },
      logo: {
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
+      thumbNail:thumNailPluribus,
     },
   
   },
@@ -236,16 +250,18 @@ const slideShowData =[
       
     media: {
       imageDesktop: oldManDesktop,
-      imageMobile: f1DriverMobile,
+      imageMobile: oldManMobile,
+      
     },
      content: {
-      title: null,
-      description: "Get up 3% Daily Cash back with purchase",
+      title: 'Thriller',
+      description: "Old sins cast new shadows.",
     },
      logo: {
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
+      thumbNail:thumNailPluribus,
     },
   
   },
@@ -253,16 +269,17 @@ const slideShowData =[
       
     media: {
       imageDesktop: sportDesktop,
-      imageMobile: f1DriverMobile,
+      imageMobile: sportMobile,
     },
      content: {
-      title: null,
-      description: "Get up 3% Daily Cash back with purchase",
+      title: 'Comedy',
+      description: "Kindess make a comeback.",
     },
      logo: {
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
+      thumbNail:thumNailPluribus,
     },
   
   },
@@ -270,16 +287,17 @@ const slideShowData =[
       
     media: {
       imageDesktop: franceDesktop,
-      imageMobile: f1DriverMobile,
+      imageMobile: franceMobile,
     },
      content: {
-      title: null,
-      description: "Get up 3% Daily Cash back with purchase",
+      title: 'Comedy',
+      description: "Same family. New plan.",
     },
      logo: {
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
+      thumbNail:thumNailPluribus,
     },
   
   },
@@ -287,19 +305,58 @@ const slideShowData =[
       
     media: {
       imageDesktop: twoManDesktop,
-      imageMobile: f1DriverMobile,
+      imageMobile: twoManMobile,
     },
      content: {
-      title: null,
-      description: "Get up 3% Daily Cash back with purchase",
+      title: 'Comedy',
+      description: "Getting it together. Together.",
     },
      logo: {
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
+      thumbNail:thumNailPluribus,
     },
   
-  }
+  },
+   {
+      
+    media: {
+      imageDesktop: blackManDesktop,
+      imageMobile: blackManMobile,
+    },
+     content: {
+      title: 'Thriller',
+      description: "Let them think they are in control.",
+    },
+     logo: {
+      title: "iWatch",
+      desktop: logoappleCardDesktop,
+      mobile: appleTvMobile,
+      thumbNail:thumNailPluribus,
+    },
+  
+  },
+   {
+      
+    media: {
+      imageDesktop: yellGirlDesktop,
+      imageMobile: yellGirlMobile,
+    },
+     content: {
+      title: 'Drama',
+      description: "Happiness is a state of mind.",
+    },
+     logo: {
+      title: "iWatch",
+      desktop: logoappleCardDesktop,
+      mobile: appleTvMobile,
+      thumbNail:thumNailPluribus,
+    },
+  
+  },
+  
+
 ]
 
 
