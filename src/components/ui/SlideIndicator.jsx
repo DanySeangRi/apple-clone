@@ -1,4 +1,3 @@
-
 export default function SlideIndicator({ 
   totalSlides, 
   currentIndex, 
@@ -12,13 +11,27 @@ export default function SlideIndicator({
         <button
           key={index}
           onClick={() => onSlideChange(index)}
-          className={`w-3 h-3 rounded-full transition-all duration-300 ${
+          className={`relative h-3 rounded-full transition-all duration-300 overflow-hidden ${
             index === currentIndex
-              ? activeColor
-              : `${inactiveColor} cursor-pointer`
+              ? `w-8` // Active: wider
+              : `w-3` // Inactive: circular
           }`}
           aria-label={`Go to slide ${index + 1}`}
-        />
+        >
+          {/* Background (inactive color) */}
+          <div className={`absolute inset-0 ${inactiveColor}`} />
+          
+          {/* Foreground (active color that fills) */}
+          <div 
+            className={`absolute inset-0 ${activeColor} transition-transform origin-left ${
+              index < currentIndex 
+                ? 'scale-x-100 duration-0' // Already completed - instant fill
+                : index === currentIndex 
+                ? 'scale-x-100 duration-3000' // Currently filling - slow animation
+                : 'scale-x-0 duration-0' // Not reached yet - empty
+            }`}
+          />
+        </button>
       ))}
     </div>
   );
