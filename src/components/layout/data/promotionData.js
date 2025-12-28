@@ -169,7 +169,7 @@ const cardCss=[
   {bigCard:'relative h-125 lg:h-173 w-full overflow-hidden mb-3'},
   {smallCard:'relative h-[500px] lg:h-[580px] overflow-hidden '},
   {slideShowBigCard : 'relative w-[275px] h-[498px] sm:w-[688px] sm:h-[338px] md:w-[930px] md:h-[523px] lg:h-[668px] lg:w-[1250px]'},
-  {bigCard:'relative h-[600px] lg:h-[900px] w-full overflow-hidden mb-3'},
+  {bigCard:'relative h-[600px] lg:h-[900px] w-full overflow-hidden '},
 ]
 
 import f1DriveDesktop from '../../../assets/feature/1960x1044sr.jpg'

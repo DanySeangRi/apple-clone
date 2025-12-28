@@ -79,7 +79,7 @@ title='' }) => {
         {/* Pause/Play */}
         <button
           onClick={() => setIsPaused(!isPaused)}
-          className="absolute bottom-3 right-4 z-20 px-2 py-2 rounded-[10px]  border border-gray-500  hover:bg-black/40 text-white transition-all duration-300 text-sm font-medium"
+          className="absolute bottom-3 right-4 z-20 px-2 py-2 rounded-[5px]  border border-gray-500  hover:bg-black/40 text-white transition-all duration-300 text-sm font-medium"
           aria-label={isPaused ? "Resume" : "Pause"}
         >
           {isPaused ? (
