@@ -69,11 +69,11 @@ title='' }) => {
 
   return (
    
-      <div className={`${background} pt-14 relative`}>
+    <div className={`${background} pt-14 relative`}>
        <h1 className="text-center text-[32px] lg:text-[56px]  font-bold mb-6">
         {title}
       </h1>
-      <div className={`relative flex h-150 lg:h-200 gap-4 px-4  `}>
+      <div className={`relative flex h-150 lg:h-200 gap-4   `}>
 
 
         {/* Pause/Play */}

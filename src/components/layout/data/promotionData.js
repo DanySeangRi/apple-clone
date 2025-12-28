@@ -191,7 +191,15 @@ import sportMobile from '../../../assets/feature/sportMobile.jpg'
 import franceMobile from '../../../assets/feature/franceMobile.jpg'
 import twoManMobile from '../../../assets/feature/twoManMobile.jpg'
 import blackManMobile from '../../../assets/feature/blackManMobile.jpg'
-import thumNailPluribus from '../../../assets/thumbnail/pluribus.png'
+import thumbNailPluribus from '../../../assets/thumbnail/pluribus.png'
+import thumbNailF1 from '../../../assets/thumbnail/f1.png'
+import thumbNailMorning from '../../../assets/thumbnail/morning-show.png'
+import thumbNailPlan2 from '../../../assets/thumbnail/plan2.png'
+import thumbNailDownCemetery from '../../../assets/thumbnail/down-cemetery.png'
+import thumNailSlow from '../../../assets/thumbnail/slow-horses.png'
+import thumbNailShinking from '../../../assets/thumbnail/shinking.png'
+import thumbNailBlackman from '../../../assets/thumbnail/blackMan.png'
+import thumbNailSport from '../../../assets/thumbnail/sport.png'
 const slideShowData =[
   {
       
@@ -204,10 +212,10 @@ const slideShowData =[
       description: "Now stream on Apple TV.",
     },
      logo: {
-      title: "iWatch",
+      title: "f1",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
-      thumbNail:thumNailPluribus,
+      thumbNail:thumbNailF1,
     },
   
   },
@@ -225,7 +233,7 @@ const slideShowData =[
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
-      thumbNail:thumNailPluribus,
+      thumbNail:thumbNailMorning,
     },
   
   },
@@ -243,7 +251,7 @@ const slideShowData =[
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
-      thumbNail:thumNailPluribus,
+      thumbNail:thumbNailDownCemetery,
     },
   
   },
@@ -262,7 +270,7 @@ const slideShowData =[
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
-      thumbNail:thumNailPluribus,
+      thumbNail:thumNailSlow,
     },
   
   },
@@ -280,7 +288,7 @@ const slideShowData =[
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
-      thumbNail:thumNailPluribus,
+      thumbNail:thumbNailSport,
     },
   
   },
@@ -298,7 +306,7 @@ const slideShowData =[
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
-      thumbNail:thumNailPluribus,
+      thumbNail:thumbNailPlan2,
     },
   
   },
@@ -316,7 +324,7 @@ const slideShowData =[
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
-      thumbNail:thumNailPluribus,
+      thumbNail:thumbNailShinking,
     },
   
   },
@@ -334,7 +342,7 @@ const slideShowData =[
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
-      thumbNail:thumNailPluribus,
+      thumbNail:thumbNailBlackman,
     },
   
   },
@@ -352,7 +360,7 @@ const slideShowData =[
       title: "iWatch",
       desktop: logoappleCardDesktop,
       mobile: appleTvMobile,
-      thumbNail:thumNailPluribus,
+      thumbNail:thumbNailPluribus,
     },
   
   },
