@@ -1,9 +1,14 @@
 import React from 'react'
-import Home from '../pages/Home'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Iphone from './pages/Iphone'
 const App = () => {
   return (
-    <div>
-      <Home/>
+    <div >
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/iphone" element={<Iphone />} />
+    </Routes>
     </div>
   )
 }
