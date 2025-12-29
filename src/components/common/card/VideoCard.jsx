@@ -61,15 +61,15 @@ const VideoCard = ({
       )}
 
       {/* Overlay content */}
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-16 lg:pb-24 text-center gap-4 px-4">
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-16 lg:pb-24 text-center  px-4">
         {title && (
-          <h1 className="text-white text-[32px] lg:text-[56px] font-medium">
+          <h1 className="text-white  text-[32px] lg:text-[56px] font-medium">
             {title}
           </h1>
         )}
 
         {description && (
-          <p className="text-white font-light text-[19px] lg:text-[24px]">
+          <p className="text-white pb-3.5  font-light text-[19px] lg:text-[24px]">
             {description}
           </p>
         )}
